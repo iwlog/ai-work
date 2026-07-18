@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>お問い合わせ | I.W.</title>
+  <meta name="description" content="I.W. へのお問い合わせページです。フォームからご連絡いただけます。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">I.W.</a>
+      <button class="nav-toggle" aria-label="メニューを開閉する" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="activities.html">活動</a></li>
+          <li><a href="qualifications.html">資格</a></li>
+          <li><a href="contact.html" class="is-active">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>お問い合わせ</h1>
+        <p>ご連絡は、以下のフォームからお願いいたします。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form
+          id="contact-form"
+          class="contact-form"
+          action="https://formspree.io/f/mlgqbrlg"
+          method="POST"
+        >
+          <p id="contact-notice" class="form-caution">
+            機密情報、勤務先の内部情報、住所、電話番号などの個人情報は記載しないでください。
+          </p>
+
+          <div class="form-group">
+            <label for="name">お名前</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              maxlength="100"
+              autocomplete="name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              maxlength="254"
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">お問い合わせ内容</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              maxlength="2000"
+              aria-describedby="message-count contact-notice"
+            ></textarea>
+            <p id="message-count" class="character-count" aria-live="polite">
+              残り2000文字
+            </p>
+          </div>
+
+          <div class="honeypot-field" aria-hidden="true">
+            <input type="text" name="_gotcha" autocomplete="off" tabindex="-1" aria-hidden="true" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">送信する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 I.W. All rights reserved.</p>
+      <p class="footer-sub">Privacy First</p>
+      <p class="footer-sub">Built with HTML / CSS / JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
