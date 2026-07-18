@@ -1,0 +1,18 @@
+# 環境変数・秘密情報
+.env
+.env.*
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
+
+# エディタ設定
+.vscode/
+.idea/
+
+# ログ・一時ファイル
+*.log
+
+# Node.js
+node_modules/
+dist/
