@@ -77,16 +77,18 @@
   function describeArticlesError(error) {
     var code = error && error.code;
     switch (code) {
+      case 'INVALID_API_URL':
+        return '指定されたAPI接続先(?api=)の形式が不正です。URLを確認してください。';
       case 'CONFIG_MISSING':
-        return 'API接続先が設定されていません。js/config.js の API_BASE_URL を設定してください。';
+        return 'API接続先が設定されていません。';
       case 'NO_FETCH':
         return 'このブラウザではfetch APIが利用できません。';
       case 'NETWORK_ERROR':
         return '記事の取得に失敗しました（通信エラー）。ネットワーク状況やAPIの起動状態を確認してください。';
       case 'HTTP_ERROR':
-        return '記事の取得に失敗しました（APIエラー: status ' + (error && error.status) + '）。';
+        return '記事データの取得に失敗しました (status: ' + (error && error.status) + ')。';
       case 'INVALID_RESPONSE':
-        return '記事の取得に失敗しました（APIの応答形式が不正です）。';
+        return '記事データの取得に失敗しました（応答の形式が不正です）。';
       default:
         return '記事の取得に失敗しました。時間をおいて再度お試しください。';
     }

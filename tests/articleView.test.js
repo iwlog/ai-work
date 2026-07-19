@@ -71,9 +71,10 @@ test('buildArticlesPageUrl: ?apiの一時上書きを引き継ぐ（一覧⇔詳
 });
 
 test('describeArticlesError: エラーコードごとに分かりやすいメッセージへ変換する', () => {
+  assert.match(describeArticlesError({ code: 'INVALID_API_URL' }), /\?api=/);
   assert.match(describeArticlesError({ code: 'CONFIG_MISSING' }), /設定されていません/);
   assert.match(describeArticlesError({ code: 'NETWORK_ERROR' }), /通信エラー/);
   assert.match(describeArticlesError({ code: 'HTTP_ERROR', status: 500 }), /500/);
-  assert.match(describeArticlesError({ code: 'INVALID_RESPONSE' }), /応答形式/);
+  assert.match(describeArticlesError({ code: 'INVALID_RESPONSE' }), /形式が不正/);
   assert.match(describeArticlesError({}), /取得に失敗/);
 });

@@ -136,9 +136,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var slug = articleView.extractSlugFromSearch(window.location.search);
     showStatus('読み込み中です…');
 
-    var baseUrl = apiClient.getConfiguredApiBaseUrl();
     try {
-      var articles = await apiClient.fetchPublicArticles(baseUrl);
+      var result = await apiClient.loadArticles({ search: window.location.search });
+      var articles = result.articles;
       if (slug) {
         var found = articleView.findArticleBySlug(articles, slug);
         if (found) {
