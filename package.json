@@ -1,0 +1,8 @@
+{
+  "name": "ai-work",
+  "private": true,
+  "description": "I.W. のポートフォリオ兼GitHub Pagesサイト。ビルド不要の素のHTML/CSS/JS。テストはNode組み込みのnode:testのみを使い、新規依存関係は追加していない。",
+  "scripts": {
+    "test": "node --test"
+  }
+}

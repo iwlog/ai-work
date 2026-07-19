@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>記事 | I.W.</title>
+  <meta name="description" content="I.W. のline-life-logから公開された記事の一覧です。" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">I.W.</a>
+      <button class="nav-toggle" aria-label="メニューを開閉する" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="profile.html">プロフィール</a></li>
+          <li><a href="activities.html">活動</a></li>
+          <li><a href="qualifications.html">資格</a></li>
+          <li><a href="articles.html" class="is-active">記事</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 id="articles-title">記事</h1>
+        <p id="articles-subtitle">line-life-logで公開された記事の一覧です。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="articles-status" class="articles-status" role="status" aria-live="polite"></div>
+
+        <div id="articles-list" class="articles-list hidden"></div>
+
+        <article id="article-detail" class="article-detail hidden">
+          <a href="articles.html" class="btn btn-secondary article-back-link">&larr; 記事一覧へ戻る</a>
+          <h2 id="article-detail-title"></h2>
+          <p id="article-detail-meta" class="article-detail-meta"></p>
+          <div id="article-detail-body" class="article-detail-body"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 I.W. All rights reserved.</p>
+      <p class="footer-sub">Privacy First</p>
+      <p class="footer-sub">Built with HTML / CSS / JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/api-client.js"></script>
+  <script src="js/markdown.js"></script>
+  <script src="js/articleView.js"></script>
+  <script src="js/articles.js"></script>
+</body>
+</html>

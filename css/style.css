@@ -582,6 +582,114 @@ img {
   opacity: 0.8;
 }
 
+/* ===== 記事一覧・詳細（line-life-log連携, Phase 4B） ===== */
+.hidden {
+  display: none !important;
+}
+
+.articles-status {
+  color: var(--color-text-sub);
+  padding: 24px 0;
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article-card {
+  display: block;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.article-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+.article-card-meta {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 0.8rem;
+  color: var(--color-text-sub);
+  margin-bottom: 8px;
+}
+
+.article-card-category {
+  color: var(--color-primary);
+}
+
+.article-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.article-card p {
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+  overflow-wrap: break-word;
+}
+
+.article-back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.article-detail-meta {
+  color: var(--color-text-sub);
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.article-detail-body {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.article-detail-body h1,
+.article-detail-body h2,
+.article-detail-body h3,
+.article-detail-body h4,
+.article-detail-body h5,
+.article-detail-body h6 {
+  margin: 24px 0 12px;
+}
+
+.article-detail-body p {
+  margin-bottom: 16px;
+}
+
+.article-detail-body ul {
+  margin: 0 0 16px 1.4em;
+  list-style: disc;
+}
+
+.article-detail-body a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.article-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.article-detail-tags .tag {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  background-color: #eaf1ff;
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
 /* ===== レスポンシブ ===== */
 @media (max-width: 768px) {
   .nav-toggle {
